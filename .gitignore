@@ -1,3 +1,5 @@
 # Datos crudos
 _modelo_ml/data/*
+# Documentos personales de los estudiantes
+_docs/
 .env
