@@ -3,3 +3,4 @@ _modelo_ml/data/*
 # Documentos personales de los estudiantes
 _docs/
 .env
+.DS_Store
