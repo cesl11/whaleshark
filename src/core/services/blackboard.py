@@ -1,19 +1,11 @@
 import asyncio
 from asyncio import Queue
-from dataclasses import dataclass, field
 from attrs import define, field as attrs_field
-from datetime import datetime, timezone
 from collections import defaultdict
-from typing import Any, Optional
+from typing import Optional
 
+from core.models.artifact import Artifact
 
-@dataclass(frozen=True)
-class Artifact:
-    author: str
-    topic: str
-    content: dict[str, Any]
-    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
-    
 
 @define
 class Blackboard:
