@@ -1,3 +1,6 @@
+"""Minimal information unit. It forms the basis of the body of knowledge available to 
+the agents—the "Blackboard."""
+
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any
