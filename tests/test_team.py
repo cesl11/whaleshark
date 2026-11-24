@@ -72,7 +72,8 @@ async def main() -> None:
     # Spawned on demand, given the leader's context; a crash yields None and the leader survives
     await bb.publish(Artifact("user", inbox, {"needs": ["echo", "boom"]}))
     r = await report()
-    assert r["echo"]["seen"] == 3 and r["boom"] is None, r
+    assert r["echo"]["seen"] == 3
+    assert r["boom"] is None, r
     assert sorted(spawned) == ["boom", "echo"]
 
     await bb.publish(Artifact("user", inbox, {"needs": ["echo"]}))
